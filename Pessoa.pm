@@ -1,7 +1,10 @@
-package MyParent;
+package Pessoa;
 use strict;
 use warnings;
  
+my $nome = "Lucas";
+my $idade = 22;
+
 sub new {
     my ($class) = @_;
     return bless {}, $class;
@@ -9,7 +12,7 @@ sub new {
  
 sub say_hi {
     my ($self) = @_;
-    print "Hi from MyParent\n";
+    print "Oi, meu nome é: $nome e tenho $idade anos\n";
     return;
 }
  

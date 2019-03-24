@@ -2,8 +2,13 @@
 use strict;
 use warnings;
  
-use MyModule;
+use Ator;
+use Peca;
+use Bastidor;
+use Escritor;
+use Historia;
+use Personagem;
+use Pessoa;
  
-my $myObj = MyModule->new;
-$myObj->say_hi;
-$myObj->say_hello;
+my $myObj = Peca->new;
+$myObj-> say_peca;
