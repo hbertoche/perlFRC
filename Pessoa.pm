@@ -15,5 +15,9 @@ sub say_hi {
     print "Oi, meu nome é: $nome e tenho $idade anos\n";
     return;
 }
+
+sub say_nomeP {
+    print "$nome";
+}
  
 1;

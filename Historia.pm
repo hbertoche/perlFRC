@@ -1,6 +1,9 @@
 package Historia;
 use strict;
 use warnings;
+use Escritor;
+
+my $escritor = Escritor->new;
 
 my $tema = "Amor e tragédia";
 my $texto = <<'TEXTO';
@@ -22,6 +25,13 @@ sub say_hello {
 sub say_historia {
     print "Essa é uma história com a temática $tema e o seu texto é mais ou menos assim: \n";
     print $texto;
+}
+
+sub say_escritorHist {
+    print "Quem escreveu a história foi o ";
+    $escritor->say_nome;
+    print "\n";
+    $escritor->say_portfolio;
 }
  
 1;

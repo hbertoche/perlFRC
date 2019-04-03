@@ -4,6 +4,8 @@ use warnings;
  
 use parent 'Pessoa';
 
+my $pessoa = Pessoa->new;
+
 my @portfolio = qw(
     Hamlet
     ReiLeão
@@ -18,8 +20,14 @@ sub say_hello {
     print "Hello from Escritor\n";
 }
 
+sub say_nome {
+    $pessoa->say_nomeP;
+}
+
 sub say_portfolio {
-    print "As histórias já escritas por foram:";
+    print "As histórias já escritas pelo ";
+    $pessoa-> say_nomeP;
+    print " foram:";
     foreach(my $i = 0; $i < scalar @portfolio; $i++) { 
         print "\n$portfolio[$i]";
         

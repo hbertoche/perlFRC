@@ -24,6 +24,7 @@ sub say_peca {
     $myPers-> say_script;
     print "E com o bastidor: ";
     $myBast-> say_funcao;
+    $myHist-> say_escritorHist;
 }
  
 1;
