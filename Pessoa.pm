@@ -1,23 +1,25 @@
 package Pessoa;
 use strict;
 use warnings;
- 
-my $nome = "Lucas";
-my $idade = 22;
+
 
 sub new {
-    my ($class) = @_;
-    return bless {}, $class;
+    my $class = shift;
+    my $self = {
+        _nome => shift,
+        _idade  => shift,
+    };
+    return bless $self, $class;
 }
  
 sub say_hi {
     my ($self) = @_;
-    print "Oi, meu nome é: $nome e tenho $idade anos\n";
+    print "Oi da pessoa com nome: $self->{_nome} e idade: $self->{_idade}\n";
     return;
 }
 
-sub say_nomeP {
-    print "$nome";
-}
+# sub say_nomeP {
+    # print "$nome";
+# }
  
 1;
